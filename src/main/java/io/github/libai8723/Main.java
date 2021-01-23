@@ -45,8 +45,8 @@ public class Main
      * @return the trimed user input DIR name
      */
     private static String getDirName() {
-        String input = JOptionPane.showInputDialog(null, "Input Directory Name",
-                "Directory Name", JOptionPane.INFORMATION_MESSAGE);
+        MyJDialog dialog = new MyJDialog(null, true);
+        String input = dialog.getInputString();
         if(input != null){
             input = Util.removeInvalidCharacter4DIRName(input);
             input = Util.myTrim(input);
